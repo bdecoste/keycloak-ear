@@ -1,5 +1,3 @@
-<subsystem
-    xmlns="urn:jboss:domain:keycloak:1.1">
     <realm name="demo">
         <realm-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoy1KXy9X3cdHBKTMDsjp7b3m/shrWLqEAYG/G1RV8GkeQidQvuFKADlTA4TKAuYEULxzO2f95sP1sykraHc7RmWmfkABfI/WWU6G2OMH9pDHG8Rbtr+QRz5sZPjBa4BKPbhWbxYzJzM1uvVNIFfToOeu9h3w24MwVF7tDeC0Y9sY/VKJ3qlhAzzsDb6XlaMUtLdP98CvNXbQL1wF0VbZn3ChpZIX3JuGtfSok/iN+pN8kpn8k1QeUr5OX07Jd/x8E9dhzQ9LqCZ12UzDDpUc3BekeFpV6eAp6yGXFHXSqCR4Y1C4m0Ozk0VMp4eTRN+6EGvdW9GxjUvvXG/UWfuykQIDAQAB</realm-public-key>
         <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
@@ -26,4 +24,3 @@
         <credential name="secret">XB4SH3NC</credential>
         <enable-cors>false</enable-cors>
     </secure-deployment>
-</subsystem>
