@@ -1,18 +1,18 @@
 <secure-deployment name="keycloack-quickstart-service-jax-rs.war">
     <realm>demo</realm>
-    <realm-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhk4CqsWadCPhkJEuvB/gqf/8ARmZNAn93hLgfygbbMVR7X3AUAklIQVnX1t/oIneU93FIx9Wuzm0RMw5wlV16ziFZNg1HHP/oSpz4pUSzhR+4icxBbHgRhyBI1WsIwwosO+uM8+W/ixnqDyFXBFTUK1q11kiVqaZxhGYxUWARI4RLmzLNKjWTAowm9EghiIVg++1nkMB8ITRQIGTtm6ehLMLNcZTAeEKff2Vrc+c1Deis6/UrhbdJEXe6jYC7NVMQDEnDXA9FqJhndggTWVw+Uyx3wd6l2kRB2uF4ri88ZoRygPAgM/IWZNLFFpI9PKwq6yjpD55SQRFFqR7/2XjyQIDAQAB</realm-public-key>
-    <auth-server-url>http://sso.lfuka.apps.devel.xpaasqe.redhat.com/auth</auth-server-url>
+    <realm-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoy1KXy9X3cdHBKTMDsjp7b3m/shrWLqEAYG/G1RV8GkeQidQvuFKADlTA4TKAuYEULxzO2f95sP1sykraHc7RmWmfkABfI/WWU6G2OMH9pDHG8Rbtr+QRz5sZPjBa4BKPbhWbxYzJzM1uvVNIFfToOeu9h3w24MwVF7tDeC0Y9sY/VKJ3qlhAzzsDb6XlaMUtLdP98CvNXbQL1wF0VbZn3ChpZIX3JuGtfSok/iN+pN8kpn8k1QeUr5OX07Jd/x8E9dhzQ9LqCZ12UzDDpUc3BekeFpV6eAp6yGXFHXSqCR4Y1C4m0Ozk0VMp4eTRN+6EGvdW9GxjUvvXG/UWfuykQIDAQAB</realm-public-key>
+    <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
     <bearer-only>true</bearer-only>
     <enable-cors>true</enable-cors>
     <ssl-required>EXTERNAL</ssl-required>
     <resource>service</resource>
-    <credential name="secret">Ol84csVn</credential>
+    <credential name="secret">secret01</credential>
 </secure-deployment>
 <secure-deployment name="keycloack-quickstart-app-jee.war">
     <realm>demo</realm>
-    <realm-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhk4CqsWadCPhkJEuvB/gqf/8ARmZNAn93hLgfygbbMVR7X3AUAklIQVnX1t/oIneU93FIx9Wuzm0RMw5wlV16ziFZNg1HHP/oSpz4pUSzhR+4icxBbHgRhyBI1WsIwwosO+uM8+W/ixnqDyFXBFTUK1q11kiVqaZxhGYxUWARI4RLmzLNKjWTAowm9EghiIVg++1nkMB8ITRQIGTtm6ehLMLNcZTAeEKff2Vrc+c1Deis6/UrhbdJEXe6jYC7NVMQDEnDXA9FqJhndggTWVw+Uyx3wd6l2kRB2uF4ri88ZoRygPAgM/IWZNLFFpI9PKwq6yjpD55SQRFFqR7/2XjyQIDAQAB</realm-public-key>
-    <auth-server-url>http://sso.lfuka.apps.devel.xpaasqe.redhat.com/auth</auth-server-url>
+    <realm-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoy1KXy9X3cdHBKTMDsjp7b3m/shrWLqEAYG/G1RV8GkeQidQvuFKADlTA4TKAuYEULxzO2f95sP1sykraHc7RmWmfkABfI/WWU6G2OMH9pDHG8Rbtr+QRz5sZPjBa4BKPbhWbxYzJzM1uvVNIFfToOeu9h3w24MwVF7tDeC0Y9sY/VKJ3qlhAzzsDb6XlaMUtLdP98CvNXbQL1wF0VbZn3ChpZIX3JuGtfSok/iN+pN8kpn8k1QeUr5OX07Jd/x8E9dhzQ9LqCZ12UzDDpUc3BekeFpV6eAp6yGXFHXSqCR4Y1C4m0Ozk0VMp4eTRN+6EGvdW9GxjUvvXG/UWfuykQIDAQAB</realm-public-key>
+    <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
     <ssl-required>EXTERNAL</ssl-required>
     <resource>app-jee</resource>
-    <credential name="secret">Ol84csVn</credential>
+    <credential name="secret">secret01</credential>
 </secure-deployment>
