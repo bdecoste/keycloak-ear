@@ -1,0 +1,18 @@
+<secure-deployment name="keycloack-quickstart-service-jax-rs.war">
+    <realm>demo</realm>
+    <realm-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhk4CqsWadCPhkJEuvB/gqf/8ARmZNAn93hLgfygbbMVR7X3AUAklIQVnX1t/oIneU93FIx9Wuzm0RMw5wlV16ziFZNg1HHP/oSpz4pUSzhR+4icxBbHgRhyBI1WsIwwosO+uM8+W/ixnqDyFXBFTUK1q11kiVqaZxhGYxUWARI4RLmzLNKjWTAowm9EghiIVg++1nkMB8ITRQIGTtm6ehLMLNcZTAeEKff2Vrc+c1Deis6/UrhbdJEXe6jYC7NVMQDEnDXA9FqJhndggTWVw+Uyx3wd6l2kRB2uF4ri88ZoRygPAgM/IWZNLFFpI9PKwq6yjpD55SQRFFqR7/2XjyQIDAQAB</realm-public-key>
+    <auth-server-url>http://sso.lfuka.apps.devel.xpaasqe.redhat.com/auth</auth-server-url>
+    <bearer-only>true</bearer-only>
+    <enable-cors>true</enable-cors>
+    <ssl-required>EXTERNAL</ssl-required>
+    <resource>service</resource>
+    <credential name="secret">Ol84csVn</credential>
+</secure-deployment>
+<secure-deployment name="keycloack-quickstart-app-jee.war">
+    <realm>demo</realm>
+    <realm-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhk4CqsWadCPhkJEuvB/gqf/8ARmZNAn93hLgfygbbMVR7X3AUAklIQVnX1t/oIneU93FIx9Wuzm0RMw5wlV16ziFZNg1HHP/oSpz4pUSzhR+4icxBbHgRhyBI1WsIwwosO+uM8+W/ixnqDyFXBFTUK1q11kiVqaZxhGYxUWARI4RLmzLNKjWTAowm9EghiIVg++1nkMB8ITRQIGTtm6ehLMLNcZTAeEKff2Vrc+c1Deis6/UrhbdJEXe6jYC7NVMQDEnDXA9FqJhndggTWVw+Uyx3wd6l2kRB2uF4ri88ZoRygPAgM/IWZNLFFpI9PKwq6yjpD55SQRFFqR7/2XjyQIDAQAB</realm-public-key>
+    <auth-server-url>http://sso.lfuka.apps.devel.xpaasqe.redhat.com/auth</auth-server-url>
+    <ssl-required>EXTERNAL</ssl-required>
+    <resource>app-jee</resource>
+    <credential name="secret">Ol84csVn</credential>
+</secure-deployment>
