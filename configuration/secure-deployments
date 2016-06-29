@@ -1,18 +1,29 @@
-<secure-deployment name="keycloack-quickstart-service-jax-rs.war">
-    <realm>demo</realm>
-    <realm-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoy1KXy9X3cdHBKTMDsjp7b3m/shrWLqEAYG/G1RV8GkeQidQvuFKADlTA4TKAuYEULxzO2f95sP1sykraHc7RmWmfkABfI/WWU6G2OMH9pDHG8Rbtr+QRz5sZPjBa4BKPbhWbxYzJzM1uvVNIFfToOeu9h3w24MwVF7tDeC0Y9sY/VKJ3qlhAzzsDb6XlaMUtLdP98CvNXbQL1wF0VbZn3ChpZIX3JuGtfSok/iN+pN8kpn8k1QeUr5OX07Jd/x8E9dhzQ9LqCZ12UzDDpUc3BekeFpV6eAp6yGXFHXSqCR4Y1C4m0Ozk0VMp4eTRN+6EGvdW9GxjUvvXG/UWfuykQIDAQAB</realm-public-key>
-    <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
-    <bearer-only>true</bearer-only>
-    <enable-cors>true</enable-cors>
-    <ssl-required>EXTERNAL</ssl-required>
-    <resource>service</resource>
-    <credential name="secret">OIpLfJeQ</credential>
-</secure-deployment>
-<secure-deployment name="keycloack-quickstart-app-jee.war">
-    <realm>demo</realm>
-    <realm-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoy1KXy9X3cdHBKTMDsjp7b3m/shrWLqEAYG/G1RV8GkeQidQvuFKADlTA4TKAuYEULxzO2f95sP1sykraHc7RmWmfkABfI/WWU6G2OMH9pDHG8Rbtr+QRz5sZPjBa4BKPbhWbxYzJzM1uvVNIFfToOeu9h3w24MwVF7tDeC0Y9sY/VKJ3qlhAzzsDb6XlaMUtLdP98CvNXbQL1wF0VbZn3ChpZIX3JuGtfSok/iN+pN8kpn8k1QeUr5OX07Jd/x8E9dhzQ9LqCZ12UzDDpUc3BekeFpV6eAp6yGXFHXSqCR4Y1C4m0Ozk0VMp4eTRN+6EGvdW9GxjUvvXG/UWfuykQIDAQAB</realm-public-key>
-    <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
-    <ssl-required>EXTERNAL</ssl-required>
-    <resource>app-jee</resource>
-    <credential name="secret">OIpLfJeQ</credential>
-</secure-deployment>
+<subsystem
+    xmlns="urn:jboss:domain:keycloak:1.1">
+    <realm name="demo">
+        <realm-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoy1KXy9X3cdHBKTMDsjp7b3m/shrWLqEAYG/G1RV8GkeQidQvuFKADlTA4TKAuYEULxzO2f95sP1sykraHc7RmWmfkABfI/WWU6G2OMH9pDHG8Rbtr+QRz5sZPjBa4BKPbhWbxYzJzM1uvVNIFfToOeu9h3w24MwVF7tDeC0Y9sY/VKJ3qlhAzzsDb6XlaMUtLdP98CvNXbQL1wF0VbZn3ChpZIX3JuGtfSok/iN+pN8kpn8k1QeUr5OX07Jd/x8E9dhzQ9LqCZ12UzDDpUc3BekeFpV6eAp6yGXFHXSqCR4Y1C4m0Ozk0VMp4eTRN+6EGvdW9GxjUvvXG/UWfuykQIDAQAB</realm-public-key>
+        <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
+        <register-node-at-startup>true</register-node-at-startup>
+        <register-node-period>600</register-node-period>
+        <ssl-required>external</ssl-required>
+        <disable-trust-manager>true</disable-trust-manager>
+        <!-- ##KEYCLOAK_TRUSTSTORE## -->
+        <allow-any-hostname>false</allow-any-hostname>
+    </realm>
+    <secure-deployment name="app-jee.war">
+        <realm>demo</realm>
+        <resource>app-jee</resource>
+        <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
+        <enable-basic-auth>true</enable-basic-auth>
+        <credential name="secret">OIpLfJeQ</credential>
+        <enable-cors>false</enable-cors>
+    </secure-deployment>
+    <secure-deployment name="service-jaxrs.war">
+        <realm>demo</realm>
+        <resource>service</resource>
+        <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
+        <enable-basic-auth>true</enable-basic-auth>
+        <credential name="secret">OIpLfJeQ</credential>
+        <enable-cors>false</enable-cors>
+    </secure-deployment>
+</subsystem>
