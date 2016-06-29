@@ -6,7 +6,7 @@
     <enable-cors>true</enable-cors>
     <ssl-required>EXTERNAL</ssl-required>
     <resource>service</resource>
-    <credential name="secret">secret01</credential>
+    <credential name="secret">OIpLfJeQ</credential>
 </secure-deployment>
 <secure-deployment name="keycloack-quickstart-app-jee.war">
     <realm>demo</realm>
@@ -14,5 +14,5 @@
     <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
     <ssl-required>EXTERNAL</ssl-required>
     <resource>app-jee</resource>
-    <credential name="secret">secret01</credential>
+    <credential name="secret">OIpLfJeQ</credential>
 </secure-deployment>
