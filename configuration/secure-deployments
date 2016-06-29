@@ -15,7 +15,7 @@
         <resource>app-jee</resource>
         <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
         <enable-basic-auth>true</enable-basic-auth>
-        <credential name="secret">OIpLfJeQ</credential>
+        <credential name="secret">XB4SH3NC</credential>
         <enable-cors>false</enable-cors>
     </secure-deployment>
     <secure-deployment name="service-jaxrs.war">
@@ -23,7 +23,7 @@
         <resource>service</resource>
         <auth-server-url>https://secure-sso-demo.cloudapps.example.com/auth</auth-server-url>
         <enable-basic-auth>true</enable-basic-auth>
-        <credential name="secret">OIpLfJeQ</credential>
+        <credential name="secret">XB4SH3NC</credential>
         <enable-cors>false</enable-cors>
     </secure-deployment>
 </subsystem>
